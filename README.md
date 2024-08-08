@@ -27,9 +27,9 @@ Basically, the steps are:
 Python 3.11+
 
 with Libs:
-PySimpleGUI
-pyperclip
-serial
-time
-enum
-sys
+PySimpleGUI, 
+pyperclip, 
+serial, 
+time, 
+enum, 
+sys, 
