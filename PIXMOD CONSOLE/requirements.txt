@@ -1,0 +1,6 @@
+PySimpleGUI
+pyperclip
+serial
+tim
+sys
+enums
