@@ -1,6 +1,6 @@
-# PiXMoD Console
+# PIXMOD Console
 
-The PiXMoD - Pixmob Control Console allows Generating IR Sequence's and also allowing sending them via Infrared to Pixmob Wristbands.
+The PIXMOB Console allows Generating IR Sequence's and also allowing sending them via Infrared to Pixmob Wristbands and LED Devices.
 
 Big thanks for Dani [@danielweidman](https://github.com/danielweidman) & James [@Lyphiard](https://github.com/Lyphiard) for the code used in this project.
 
