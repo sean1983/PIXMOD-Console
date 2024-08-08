@@ -5,7 +5,7 @@ The PIXMOB Console allows Generating IR Sequence's and also allowing sending the
 Big thanks for Dani [@danielweidman](https://github.com/danielweidman) & James [@Lyphiard](https://github.com/Lyphiard) for the code used in this project.
 
 You can come find out more, get assistance or help with our projects by joining us on our PIXMOD Discord server! 
-https://discord.gg/UYqTjC7xp3
+[JOIN DISCORD](https://discord.gg/UYqTjC7xp3)
 
 You will need:
 
