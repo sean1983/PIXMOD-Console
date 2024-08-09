@@ -4,6 +4,7 @@
 ##                                                           ##
 ##   With special thanks to:                                 ##
 ##         Dani Weidman: https://github.com/danielweidman    ##
+##          Zach Resmer: https://github.com/zacharesmer      ##
 ##       James Lyphiard: https://github.com/Lyphiard         ##
 ##                                                           ##
 ##                                                           ##
