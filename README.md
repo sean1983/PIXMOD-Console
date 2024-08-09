@@ -25,13 +25,13 @@ Follow these steps to set up your system:
 1. Connect an IR LED/transmitter to the MCU board.
 2. Connect the MCU to a computer via USB.
 3. Upload the sketch from [here](https://github.com/danielweidman/pixmob-ir-reverse-engineering/tree/main/arduino_sender) to the MCU.
-- *Note the port/device address of the MCU*
+- *Note the serial port/device address of the MCU*
   - **Window:** COM***x***
   - **Linux:** /dev/ttyUSB***x***
   - **OSX:** /dev/tty.usb***x***
-4. Set the `ARDUINO_SERIAL_PORT` in `config.py`.
+4. Set the serial port using  *ARDUINO_SERIAL_PORT* in **config.py**.
 *If using a low-power Arduino device like an Arduino Nano, also set `WAIT_BEFORE_SEND` to True.*
-5. Run the PIXMOD Console Python script.
+5. Run the PIXMOD Console.
 
 ## Software Requirements
 - Arduino IDE with the following libraries:
