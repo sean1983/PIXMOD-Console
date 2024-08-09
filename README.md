@@ -1,7 +1,7 @@
 # PIXMOD Console
 
 ## Overview
-The PIXMOD Console facilitates the generation and transmission of IR sequences, enabling communication with Pixmob wristbands and LED devices via infrared.
+The PIXMOD Console let's you   generate and transmit Infrared  sequences, enabling control of Pixmob wristbands and other pixmob device's.
 
 ## Acknowledgments
 Special thanks to:
