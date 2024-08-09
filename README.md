@@ -1,64 +1,48 @@
 # PIXMOD Console
 
-The PIXMOB Console allows Generating IR Sequence's and also allowing sending them via Infrared to Pixmob Wristbands and LED Devices.
+## Overview
+The PIXMOD Console facilitates the generation and transmission of IR sequences, enabling communication with Pixmob wristbands and LED devices via infrared.
 
-Big thanks to:
-*Dani Weidman[@danielweidman](https://github.com/danielweidman)
+## Acknowledgments
+Special thanks to:
+- Dani Weidman [@danielweidman](https://github.com/danielweidman)
+- Zach Resmer [@zacharesmer](https://github.com/zacharesmer)
+- James Lyphiard [@Lyphiard](https://github.com/Lyphiard)
 
-*Zach Resmer[@zacharesmer](https://github.com/zacharesmer)
+For their extensive initial research, dedication to reverse engineering, and contributions to the programming and code used in this project. Also, a shoutout to our loyal Discord community members for their invaluable work, input, and research.
 
-*James Lyphiard[@Lyphiard](https://github.com/Lyphiard
-
-For the time and enough of all the initial research, many hours dedicated to the reverse engineering, research, discoveries and the time programming, But most of all to the the code used in this project.
-
-Also not forgetting all the work, input and research done by the loyal members of our Discord community.
-
-*Come join our PIXMOD Discord server! You can learn more, chat about your Pixmob Projects or MOD's, get help with our scripts or tools, and even ask for assistance with reactivating your wristband. It's just a few clicks away!
+## Join Our Community
+Come join our PIXMOD Discord server! Engage in discussions about Pixmob projects or MODs, receive help with our scripts or tools, and request assistance with reactivating your wristband.
 [JOIN DISCORD](https://discord.gg/UYqTjC7xp3)
 
-You will need:
+## Hardware Requirements
+1. An Arduino, ESP8266, ESP32 or simlar compatible (MCU) microcontroller.
+2. A 940nm Infrared LED and a 200Ω Resistor or Prebuilt Emitter.
+3. Computer running Windows, Linux or OSX, For uploading Arduino Sketch and running PIXMOD Console.
 
-1. An Arduino-compatible microcontroller.
-2. A 940nm IR emitter for the Arduino. You could set up a raw IR led or use a board like the transmitter piece of [this](https://www.amazon.com/Digital-Receiver-Transmitter-Arduino-Compatible/dp/B01E20VQD8/).
+## Getting Started
+Follow these steps to set up your system:
+1. Connect an IR LED/transmitter to the MCU board.
+2. Connect the MCU to a computer via USB.
+3. Upload the sketch from [here](https://github.com/danielweidman/pixmob-ir-reverse-engineering/tree/main/arduino_sender) to the MCU.
+***- Note the port/device address of the MCU.
+ - Window: COM<x>
+ - Linux: /dev/ttyUSB<x>
+ - OSX: /dev/tty.usb<x>***
+4. Set the `ARDUINO_SERIAL_PORT` in `config.py`.
+*If using a low-power Arduino device like an Arduino Nano, also set `WAIT_BEFORE_SEND` to True.*
+5. Run the PIXMOD Console Python script.
 
-You can find the Arduino Sender Sketch on Dani's Github here: [@danielweidman - PixMob IR (and RF!) Reverse Engineering Project](https://github.com/danielweidman/pixmob-ir-reverse-engineering/tree/main/arduino_sender).
+## Software Requirements
+- Arduino IDE with the following libraries:
+  - IRremote or IRremoteESP8266
+- Python 3.11 or later with the following libraries:
+  - PySimpleGUI
+  - pyperclip
+  - serial
+  - time
+  - enum
+  - sys
 
-Basically, the steps are:
-1. Connect an IR LED/transmitter to the Arduino board.
-
-2. Connect the MCU to a computer by USB.
-
-3. Upload the sketch from &quot;[here](https://github.com/danielweidman/pixmob-ir-reverse-engineering/tree/main/arduino_sender)&quot;to the MCU. 
-*You may need to install the IRremote or IRremoteESP8266 library first.*
-
-**Make sure to set the IR tranmitter data pin variable and note down the port/device address (COM port on Windows, /dev/\<something\> on Linux and macOS) of the MCU.**
-
-4. Set the `ARDUINO_SERIAL_PORT` in "config.py". 
-
-*If using a lower-power Arduino device like an Arduino Nano, also set `WAIT_BEFORE_SEND` to True.*
-
-5. Run the PiXMoD Console Python Script.
-
-
-
-## Requirements:
-Arduino, ESP32 or Simlar MCU that uses the Arduino IDE.
-
-#A 940nm Infrared LED and a 200Ω Resistor or Prebuilt Emitter
-
-#A computer to upload the Arduino Sketch to the MCU & also to run the PIXMOD Console.
-
-#Software and Libraries
-
-#Arduino IDE
-
-IRremote &/or IRremoteESP8266
-
-#Python 3.11+
-
-PySimpleGUI, 
-pyperclip, 
-serial, 
-time, 
-enum, 
-sys, 
+## Contributing
+Contributions to the PIXMOD Console are welcome! Whether it's refining the code, adding new features, or improving documentation, we appreciate your help in making this project better.
