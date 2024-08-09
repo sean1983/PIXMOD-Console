@@ -21,7 +21,7 @@ Come join our PIXMOD Discord server! Engage in discussions about Pixmob projects
 3. Computer running Windows, Linux or OSX, For uploading Arduino Sketch and running PIXMOD Console.
 
 ## Getting Started
-You'll first need the Arduino Sender Sketch on Dani's Github here: [@danielweidman - PixMob IR (and RF!) Reverse Engineering Project](https://github.com/danielweidman/pixmob-ir-reverse-engineering/tree/main/arduino_sender).
+You'll first need the Arduino Sender Sketch on Dani's Github here: [PixMob IR (and RF!) Reverse Engineering Project](https://github.com/danielweidman/pixmob-ir-reverse-engineering/tree/main/arduino_sender).
 
 Follow these steps to set up your DIY Infrared Transmitter:
 1. Connect an IR LED/transmitter to the MCU board.
