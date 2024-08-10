@@ -1,5 +1,4 @@
 # Shared configuration options
-import serial
 
 # Which serial port the Arduino is connected to. You can find this with the Arduino IDE or follow these instructions:
 # https://www.mathworks.com/help/supportpkg/arduinoio/ug/find-arduino-port-on-windows-mac-and-linux.html

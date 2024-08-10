@@ -18,41 +18,42 @@
 ##                                                           ##
 ###############################################################
 
-import PySimpleGUI as sg
-import pyperclip
-import serial
-import time
-from pixmob_ir_protocol import Chance, Time
-import pixmob_ir_protocol as pmir
-from pixmob_conversion_funcs import bits_to_arduino_string
-import config as cfg
-
-# VER & GUI Settings
+# Ver & GUI Settings
 APP_TITLE = "PiXMoD Console"
 APP_VERSION = "v.0.1.5"
 FULL_TITLE = f"{APP_TITLE} {APP_VERSION}"
 dropdown_width = 20
 window_background_color = "#331166"  # Dark Purple
 
+# Import required Libs
+import config as cfg
+import pixmob_ir_protocol as pmir
+from pixmob_ir_protocol import Chance, Time
+from pixmob_conversion_funcs import bits_to_arduino_string
+import PySimpleGUI as sg
+import pyperclip
+import serial
+import time
+
 # Mapping Labels to values in pixmob_ir_protocol
 chance_options = {
-    "100%": Chance.CHANCE_100_PCT,
-    "88%": Chance.CHANCE_88_PCT,
-    "67%": Chance.CHANCE_67_PCT,
-    "50%": Chance.CHANCE_50_PCT,
-    "32%": Chance.CHANCE_32_PCT,
-    "16%": Chance.CHANCE_16_PCT,
-    "10%": Chance.CHANCE_10_PCT,
-    "4%": Chance.CHANCE_4_PCT,
+       "100%": Chance.CHANCE_100_PCT,
+        "88%": Chance.CHANCE_88_PCT,
+        "67%": Chance.CHANCE_67_PCT,
+        "50%": Chance.CHANCE_50_PCT,
+        "32%": Chance.CHANCE_32_PCT,
+        "16%": Chance.CHANCE_16_PCT,
+        "10%": Chance.CHANCE_10_PCT,
+         "4%": Chance.CHANCE_4_PCT,
 }
 
 time_options = {
-    "0 ms": Time.TIME_0_MS,
-    "32 ms": Time.TIME_32_MS,
-    "96 ms": Time.TIME_96_MS,
-    "192 ms": Time.TIME_192_MS,
-    "480 ms": Time.TIME_480_MS,
-    "960 ms": Time.TIME_960_MS,
+       "0 ms": Time.TIME_0_MS,
+      "32 ms": Time.TIME_32_MS,
+      "96 ms": Time.TIME_96_MS,
+     "192 ms": Time.TIME_192_MS,
+     "480 ms": Time.TIME_480_MS,
+     "960 ms": Time.TIME_960_MS,
     "2400 ms": Time.TIME_2400_MS,
     "3840 ms": Time.TIME_3840_MS,
 }
@@ -120,7 +121,7 @@ def reset_values(window):
 def generate_ir(window, values):
     try:
         # Check used params
-        print(f"Selected chance: {values['-CHANCE-']}")
+        #print(f"Selected chance: {values['-CHANCE-']}")
         chance = chance_options[values['-CHANCE-']]  
         command = pmir.CommandSingleColorExt(
             red=int(float(values['-IN-RED-'])), 
@@ -190,7 +191,7 @@ while True:
             # Setup serial connection
             arduino = serial.Serial(port=cfg.ARDUINO_SERIAL_PORT, baudrate=cfg.ARDUINO_BAUD_RATE, timeout=.1)
             if cfg.WAIT_BEFORE_SEND:
-                time.sleep(1)
+                time.sleep(1.5)
 
             arduino.write(bytes(arduino_string, 'utf-8'))
             time.sleep(0.1)  # Give time for the data to be sent
