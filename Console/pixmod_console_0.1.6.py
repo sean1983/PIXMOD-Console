@@ -3,9 +3,9 @@
 ##         https://github.com/sean1983/PIXMOD-Console        ##
 ##                                                           ##
 ##   With special thanks to:                                 ##
-##         Dani Weidman: https://github.com/danielweidman    ##
-##          Zach Resmer: https://github.com/zacharesmer      ##
-##       James Lyphiard: https://github.com/Lyphiard         ##
+##        Dani Weidman: https://github.com/danielweidman     ##
+##         Zach Resmer: https://github.com/zacharesmer       ##
+##          James WAng: https://github.com/jamesw343         ##
 ##                                                           ##
 ##                                                           ##
 ##      JOIN OUR DISCORD https://discord.gg/UYqTjC7xp3)      ##
