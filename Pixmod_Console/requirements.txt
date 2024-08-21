@@ -1,6 +1,5 @@
-PySimpleGUI
-pyperclip
-serial
-time
-sys
-enums
+pyperclip==1.9.0
+pyserial==3.5
+PySimpleGUI==5.0.6
+PySimpleGUI==5.0.6
+config==0.5.1

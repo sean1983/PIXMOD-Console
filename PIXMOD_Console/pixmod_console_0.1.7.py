@@ -1,35 +1,37 @@
 ###############################################################
+##                                                           ##
 ##     PIXMOD Console by Sean Yem & The PIXMOD Community     ##
 ##         https://github.com/sean1983/PIXMOD-Console        ##
 ##                                                           ##
 ##   With special thanks to:                                 ##
-##        Dani Weidman: https://github.com/danielweidman     ##
-##         Zach Resmer: https://github.com/zacharesmer       ##
-##          James WAng: https://github.com/jamesw343         ##
+##         Dani Weidman: https://github.com/danielweidman    ##
+##          Zach Resmer: https://github.com/zacharesmer      ##
+##           James Wang: https://github.com/jamesw343        ##
+##                 cra0: https://github.com/cra0             ##
 ##                                                           ##
+## >>> JOIN OUR DISCORD: https://discord.gg/UYqTjC7xp3   <<< ##
 ##                                                           ##
-##      JOIN OUR DISCORD https://discord.gg/UYqTjC7xp3)      ##
 ###############################################################
 ##                                                           ##
-##       ** MAKE SURE TO INSTALL REQUIRE LIBRARYS **         ##
-##  pip install PySimpleGUI pyperclip serial time sys enums  ##
-##                                                           ##
-##     **  Please configure Serial Port in 'config.py' **    ##
+##    ****   MAKE SURE TO INSTALL REQUIRE LIBRARYS   ****    ##
+##    ***      pip install -r ./requirements.txt      ***    ##
+##    **                                               **    ##
+##    *   Please configure Serial Port in 'config.py'   *    ##
 ##                                                           ##
 ###############################################################
 
 # Ver & GUI Settings
-APP_TITLE = "PiXMoD Console"
-APP_VERSION = "v.0.1.5"
+APP_TITLE = "PIXMOD Console"
+APP_VERSION = "v.0.1.7"
 FULL_TITLE = f"{APP_TITLE} {APP_VERSION}"
 dropdown_width = 20
 window_background_color = "#331166"  # Dark Purple
 
 # Import required Libs
 import config as cfg
-import pixmob_ir_protocol as pmir
-from pixmob_ir_protocol import Chance, Time
-from pixmob_conversion_funcs import bits_to_arduino_string
+import libs.pixmob_ir_protocol as pmir
+from libs.pixmob_ir_protocol import Chance, Time
+from libs.pixmob_conversion_funcs import bits_to_arduino_string
 import PySimpleGUI as sg
 import pyperclip
 import serial
@@ -60,7 +62,7 @@ time_options = {
 
 # GUI Theme & Layout
 layout = [
-    [sg.Text(FULL_TITLE, size=(20, 1), font=("Helvetica", 20), justification="left", background_color=window_background_color)],
+    [sg.Text(FULL_TITLE, size=(20, 1), font=("Helvetica", 16), justification="left", background_color=window_background_color)],
     [
         sg.Column([
             [sg.Text("Red", size=(10, 1), justification='left', background_color=window_background_color)],
@@ -92,7 +94,7 @@ layout = [
         sg.Button("Copy Code", button_color=('white', '#404040'), disabled=True),
         sg.Button("Send IR", button_color=('white', '#006400'), disabled=True) 
     ],
-    [sg.InputText(size=(80, 1), key='-OUTPUT-', font=('Helvetica', 12, 'bold'), background_color='white')]
+    [sg.InputText(size=(145, 1), key='-OUTPUT-', font=('Helvetica', 7), background_color='white')]
 ]
 
 # Launch GUI
@@ -121,7 +123,7 @@ def reset_values(window):
 def generate_ir(window, values):
     try:
         # Check used params
-        print(f"Selected chance: {values['-CHANCE-']}")
+        ##print(f"Selected chance: {values['-CHANCE-']}")
         chance = chance_options[values['-CHANCE-']]  
         command = pmir.CommandSingleColorExt(
             red=int(float(values['-IN-RED-'])), 

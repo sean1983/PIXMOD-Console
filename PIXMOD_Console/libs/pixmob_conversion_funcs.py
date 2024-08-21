@@ -27,15 +27,15 @@ def bits_to_run_lengths_pulses(bit_list):
     return run_lengths
 
 
-def bits_to_run_lengths_microseconds(bit_list, pulse_length=cfg.PULSE_LENGTH):
+def bits_to_run_lengths_microseconds(bit_list, pulse_length=694):
     # Convert bit list to run length in number of pulses/chunks, then multiply each of those lengths by the pulse/chunk
     # length in microseconds
     # Example: [1, 0, 0, 0, 0, 1, 1] -> [1, 4, 2] -> [700, 2800, 1400]
-    # Note that in this example, cfg.PULSE_LENGTH is 700
+
     return [pulses * pulse_length for pulses in bits_to_run_lengths_pulses(bit_list)]
 
 
-def run_lengths_to_bits(run_length_list, pulse_length=cfg.PULSE_LENGTH, acceptable_error=1):
+def run_lengths_to_bits(run_length_list, pulse_length=694, acceptable_error=1):
     """
     Convert list of run lengths to 1s and 0s based on the pulse length in the kwarg
     Resulting lists always start with 1
