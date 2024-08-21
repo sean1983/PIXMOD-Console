@@ -7,7 +7,7 @@ The PIXMOD Console let's you   generate and transmit Infrared  sequences, enabli
 Special thanks to:
 - Dani Weidman [@danielweidman](https://github.com/danielweidman)
 - Zach Resmer [@zacharesmer](https://github.com/zacharesmer)
-- James Lyphiard [@Lyphiard](https://github.com/Lyphiard)
+- James Wang [@jamesw343](https://github.com/jamesw343)
 
 For their extensive initial research, dedication to reverse engineering, and contributions to the programming and code used in this project. Also, a shoutout to our loyal Discord community members for their invaluable work, input, and research.
 
