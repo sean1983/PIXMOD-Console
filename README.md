@@ -22,8 +22,8 @@ Come join our PIXMOD Discord server! Engage in discussions about Pixmob projects
 3. Computer running Windows, Linux or OSX, For uploading Arduino Sketch and running PIXMOD Console.
 
 ## Getting Started
-You'll first need the Arduino Sender Sketch on Dani's Github here:
-[PixMob IR (and RF!) Reverse Engineering Project](https://github.com/danielweidman/pixmob-ir-reverse-engineering/tree/main/arduino_sender).
+You'll first need the Arduino Sender Sketch on Dani's Github here:<br />
+[PixMob IR (and RF!) Reverse Engineering Project](https://github.com/danielweidman/pixmob-ir-reverse-engineering/tree/main/arduino_sender)
 
 ### Steps
 Follow these steps to set up your DIY Infrared Transmitter:
@@ -34,7 +34,7 @@ Follow these steps to set up your DIY Infrared Transmitter:
 
 3. Upload the sketch from [here](https://github.com/danielweidman/pixmob-ir-reverse-engineering/tree/main/arduino_sender) to the MCU.
 
-#### Examples
+  #### Examples
 - *Note the serial port/device address of the MCU*
   - **Window:** COM***x***
   - **Linux:** /dev/ttyUSB***x***
@@ -50,14 +50,16 @@ Follow these steps to set up your DIY Infrared Transmitter:
 
 ## Software Requirements
 - Arduino IDE with the following libraries:
-  - IRremote or IRremoteESP8266
+  - IRremote *(Use for Arduinio UNO & Mega)*
+  - IRremoteESP8266 *(Use for ESP8266 & ESP32)*
+    - ***Version 2.0.17*** *(Version 3+ has issues)*
+
 - Python 3.11 or later with the following libraries:
-  - PySimpleGUI
-  - pyperclip
-  - serial
-  - time
-  - enum
-  - sys
+  - pyperclip==1.9.0
+  - pyserial==3.5
+  - PySimpleGUI==5.0.6
+  - PySimpleGUI==5.0.6
+  - config==0.5.1
 
 ## Contributing
 Contributions to the PIXMOD Console are welcome! Whether it's refining the code, adding new features, or improving documentation, we appreciate your help in making this project better.
