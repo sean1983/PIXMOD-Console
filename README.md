@@ -34,7 +34,11 @@ Follow these steps to set up your DIY Infrared Transmitter:
   - **OSX:** /dev/tty.usb***x***
 4. Set the serial port using  *ARDUINO_SERIAL_PORT* in **config.py**.
 *If using a low-power Arduino device like an Arduino Nano, also set `WAIT_BEFORE_SEND` to True.*
-5. Run the PIXMOD Console.
+
+5. Install the Python Libraries using:
+   ``` pip install -r ./requirements.txt ```
+
+6. Run the PIXMOD Console.
 
 ## Software Requirements
 - Arduino IDE with the following libraries:
