@@ -3,6 +3,8 @@
 ## Overview
 The PIXMOD Console let's you   generate and transmit Infrared  sequences, enabling control of Pixmob wristbands and other pixmob device's.
 
+![PIXMOD Console](Media/pmc1.png)
+
 ## Acknowledgments
 Special thanks to:
 - Dani Weidman [@danielweidman](https://github.com/danielweidman)
