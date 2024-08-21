@@ -24,19 +24,27 @@ Come join our PIXMOD Discord server! Engage in discussions about Pixmob projects
 ## Getting Started
 You'll first need the Arduino Sender Sketch on Dani's Github here: [PixMob IR (and RF!) Reverse Engineering Project](https://github.com/danielweidman/pixmob-ir-reverse-engineering/tree/main/arduino_sender).
 
+### Steps
 Follow these steps to set up your DIY Infrared Transmitter:
+
 1. Connect an IR LED/transmitter to the MCU board.
+
 2. Connect the MCU to a computer via USB.
-3. Upload the sketch from [here](https://github.com/danielweidman/pixmob-ir-reverse-engineering/tree/main/arduino_sender) to the MCU.
+
+3. Upload the sketch from [here]
+
+(https://github.com/danielweidman/pixmob-ir-reverse-engineering/tree/main/arduino_sender) to the MCU.
+#### Examples
 - *Note the serial port/device address of the MCU*
   - **Window:** COM***x***
   - **Linux:** /dev/ttyUSB***x***
   - **OSX:** /dev/tty.usb***x***
+  
 4. Set the serial port using  *ARDUINO_SERIAL_PORT* in **config.py**.
 *If using a low-power Arduino device like an Arduino Nano, also set `WAIT_BEFORE_SEND` to True.*
 
 5. Install the Python Libraries using:
-   ``` pip install -r ./requirements.txt ```
+    ``` pip install -r ./requirements.txt ```
 
 6. Run the PIXMOD Console.
 
