@@ -31,9 +31,8 @@ Follow these steps to set up your DIY Infrared Transmitter:
 
 2. Connect the MCU to a computer via USB.
 
-3. Upload the sketch from [here]
+3. Upload the sketch from [here](https://github.com/danielweidman/pixmob-ir-reverse-engineering/tree/main/arduino_sender) to the MCU.
 
-(https://github.com/danielweidman/pixmob-ir-reverse-engineering/tree/main/arduino_sender) to the MCU.
 #### Examples
 - *Note the serial port/device address of the MCU*
   - **Window:** COM***x***
